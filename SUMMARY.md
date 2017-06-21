@@ -6,7 +6,7 @@
   * [Dynamically](Angular2/dynamically.md)
   * [About Learning](Angular2/about-learning.md)
 * C\#
-  * [Extensions Method Timing](design-pattern/CSharp/ExtensionMethod/Timing.md)
+  * [Extensions Method Timing](CSharp/ExtensionMethod/Timing.md)
   * [Interface-base Development](CSharp/Interface-base Development.md)
   * [.Net Core 2.0 on Visual Studio](CSharp/NetCore20/Net-Core-20-Preview-With-Visual-Studio.md)
 * Reactive Programming
@@ -14,7 +14,7 @@
     * [IOC Point](reactive-programming/observer-and-observable/ioc-point.md)
   * [Different ?](reactive-programming/different.md)
   * [\[From LINQ Through Interactive\(Ix\) To Reactive\(Rx\)-to-reactive\(rx\).md\)\]\(reactive-programming/from-linq-through-interactive\(ix\)](reactive-programming/from-linq-through-interactiveix-to-reactiverx-to-reactiverxmdreactive-programmingfrom-linq-through-interactiveix.md)
-* Design Pattern
+* [Design Pattern](design-pattern.md)
   * [About Design Pattern](design-pattern/about-design-pattern.md)
   * [Dependency Inversion](design-pattern/dependency-inversion/dependency-inversion.md)
     * [what is DI in basic?](design-pattern/dependency-inversion/dependency-inversion/what-is-di-in-basic.md)
