@@ -1,4 +1,4 @@
-# 技術藍圖
+# Summary
 
 * [Introduction](README.md)
 * Angular 2
@@ -15,17 +15,17 @@
   * [Different ?](reactive-programming/different.md)
   * [\[From LINQ Through Interactive\(Ix\) To Reactive\(Rx\)-to-reactive\(rx\).md\)\]\(reactive-programming/from-linq-through-interactive\(ix\)](reactive-programming/from-linq-through-interactiveix-to-reactiverx-to-reactiverxmdreactive-programmingfrom-linq-through-interactiveix.md)
 * Design Pattern
-  * [About Design Pattern](design-pattern/design-pattern/about-design-pattern.md)
+  * [About Design Pattern](design-pattern/about-design-pattern.md)
   * [Dependency Inversion](design-pattern/dependency-inversion/dependency-inversion.md)
     * [what is DI in basic?](design-pattern/dependency-inversion/dependency-inversion/what-is-di-in-basic.md)
     * [DotNet Core DI](design-pattern/dependency-inversion/dependency-inversion/dotnet-core-di.md)
     * [IServiceProvider & ComponentModel](design-pattern/dependency-inversion/dependency-inversion/iserviceprovider.md)
     * [Constructor Injection](design-pattern/dependency-inversion/dependency-inversion/constructor-injection.md)
     * [Magic Box ? 與建置階段 ?](design-pattern/dependency-inversion/dependency-inversion/magic-box.md)
-  * [ComponentModel](design-pattern/design-pattern/componentmodel.md)
-  * [IEnumerable vs Iterator](design-pattern/design-pattern/ienumerable-vs-iterator.md)
-  * [Decorator & Convention](design-pattern/design-pattern/decorator-and-convention.md)
-  * [Action & Filter & Middleware](design-pattern/design-pattern/action-and-filter-and-middleware.md)
+  * [ComponentModel](design-pattern/componentmodel.md)
+  * [IEnumerable vs Iterator](design-pattern/ienumerable-vs-iterator.md)
+  * [Decorator & Convention](design-pattern/decorator-and-convention.md)
+  * [Action & Filter & Middleware](design-pattern/action-and-filter-and-middleware.md)
 * OOP
   * [OOP 思維](OOP/oop.md)
   * [Abstractions](OOP/abstractions.md)
