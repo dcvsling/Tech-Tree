@@ -79,10 +79,11 @@ internal class ServiceCollectionDecorator<T> : IServiceCollection<T>
 then other programmer should register like follow script:
 
 ```
-new ServiceCollection().AddHandler<object,IWriteToCommandHandler<object>, OutputWithStringCommandHandler<object>>()
-    .AddHandler<object, IWriteToCommandHandler<object>, OutputWithJsonCommandHandler<object>>()
-    .AddHandlerDecorator<object, IDoManyTimesCommandHandlerDecorator<object>,TwiceCommandHandlerDecorator<object>>()
-    .AddHandlerDecorator<object, IDoManyTimesCommandHandlerDecorator<object>, ThreeTimesCommandHandlerDecorator<object>>()
+new ServiceCollection()
+    .AddHandler<object, IWriteTo<object>, OutputWithString<object>>()
+    .AddHandler<object, IWriteTo<object>, OutputWithJson<object>>()
+    .AddHandlerDecorator<object, IDoManyTimes<object>, Twice<object>>()
+    .AddHandlerDecorator<object, IDoManyTimes<object>, ThreeTimes<object>>()
 ```
 
 這樣寫的不僅可以不讓Design Pattern 的文字充斥於程式中
@@ -91,7 +92,7 @@ new ServiceCollection().AddHandler<object,IWriteToCommandHandler<object>, Output
 
 ---
 
-ps : 泛型的註冊實際上不需要額外宣告一個無意義的泛行參數 只需要 .AddService\(Type,Type\) 
+ps : 泛型的註冊實際上不需要額外宣告一個無意義的泛行參數 只需要 .AddService\(Type,Type\)
 
 這裡只是個人發懶 讓編譯器幫我去判斷是否符合DI註冊的規則而已 XD
 
