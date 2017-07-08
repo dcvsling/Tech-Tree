@@ -17,7 +17,7 @@ public interface ICommandHandlerDecorator<TCommand> : ICommandHandler<TCommand> 
 }
 ```
 
-so 
+so i design follow script
 
 ```
 //-------extensions methods-------
@@ -85,5 +85,13 @@ new ServiceCollection().AddHandler<object,IWriteToCommandHandler<object>, Output
     .AddHandlerDecorator<object, IDoManyTimesCommandHandlerDecorator<object>, ThreeTimesCommandHandlerDecorator<object>>()
 ```
 
+這樣寫的不僅可以不讓Design Pattern 的文字充斥於程式中
 
+還可以引導或以較為簡單的方式完成 DI Container 的註冊
+
+---
+
+ps : 泛型的註冊實際上不需要額外宣告一個無意義的泛行參數 只需要 .AddService\(Type,Type\) 
+
+這裡只是個人發懶 讓編譯器幫我去判斷是否符合DI註冊的規則而已 XD
 
