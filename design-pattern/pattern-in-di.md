@@ -96,3 +96,5 @@ ps : 泛型的註冊實際上不需要額外宣告一個無意義的泛行參數
 
 這裡只是個人發懶 讓編譯器幫我去判斷是否符合DI註冊的規則而已 XD
 
+ps2 : 完整範例 [連結](https://github.com/dcvsling/CoWorker.HolisticAbstractions)
+
