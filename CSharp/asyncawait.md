@@ -2,11 +2,40 @@
 
 ---
 
-Task : 是讓指定的Delegate 以另一個線程來執行.
+關鍵字
 
-async : 指定目標delegate 為存在非同步語法的方法，回傳值改變為Task & Task&lt;T&gt; \(這裡不建議以void 作為回傳值\(註1\)\)
+* Task : 是讓指定的Delegate 以另一個線程來執行.
+* async : 指定目標delegate 為存在非同步語法的方法，回傳值改變為Task & Task&lt;T&gt; \(這裡不建議以void 作為回傳值\(註1\)\)
+* await : 等待目標排程結束
 
-await : 等待目標排程結束
+理解方法
+
+1. 遇到Task 時會另開線程與當下線程一起往下執行
+2. 遇到await 時程式會等待目標Task完成
+3. await Task.Run 為等待一個新開的排程
+4. 等待時不見得指有這個牌程在執行　可能還有其他尚未進入等待的牌程也在執行
+5. async 是 可以讓method 中的　await Task.Run 簡化成為　await 的method 關鍵字
+6. 從單一個牌程的視角來看程式的運行流程仍然沒有改變 只是多了一個等待的通知繼續進行的狀態
+7. 需要圖輔助的話,可以以下面這張圖來做為參考
+
+```
+------------------->　主線程時間軸
+單線程
+------------------->
+非同步(非多線程同時進行)
+----->|      |----->  中間為等待的時間 (用 await)
+      |----->|        另一個牌程開始運作並結束 (用Task)
+多線程
+------------------->  主線程於中途創造了兩個牌程(用Task)　但並未等待任何一個牌程
+   |-------->         排程一執行結束
+       |-------->     排程二執行結束
+非同步與多線程交錯情境
+----->|    |----->|   |-------> M  M建立T1,T3 並都於建立時等待 (用 await Task)
+      |--->|                    T1 T1建立T2但沒有進行等待(用 Task)
+        |-------|   |---->      T2 T2建立了T4但是並未立即進行等待進行等待(先用task 後面才await)
+                  |-->|         T3 T3建立後運行結束
+             |----->|           T4 T4建立後與T2一起運行 中途T2進入等待直到T4結束
+```
 
 所以使用法如下：
 
@@ -19,7 +48,7 @@ public void NonAsyncMethod()
                                                                           //具回傳值的排程型別為Task<T>
     resultTask.Wait();  //當需要回傳值的時候必須以Wait method 等待排程完成　否則通常都會拿到null (因為回傳值還沒回來)
     object result = resultTask.Result; //以Task.Result取得回傳值 
-    
+
     // 無回傳值的Task 可以無需執行Wait方法
     // await task; 也同樣可以利用Wait　方法等待排程完成後　在繼續往下執行
 }
@@ -36,8 +65,8 @@ async public Task InvokeAsync() //async 標示法可以寫在開頭,個人建議
         return DemoFunc();                  // 這裡一樣可以回傳所需的回傳值
     });
     result = await Task.Run(DemoActionManyMethod); // 如果不想寫lambda 寫成Method 並帶入名稱也是可以的
-    
-    
+
+
     // 因為仍然沒有等待中途執行的　Task.Run(() => DemoTask()) 所以該牌程仍然在持續進行中
     // 以此可以做出類似MultiThread的效果 
 }
@@ -49,7 +78,7 @@ public Func<Task> DemoActionTask => () => Task.CompletedTask;
 // 無標示async 且具有Task<T>回傳值的方法可用Task.FromResult<T>(T t)來把結果回傳
 public Func<Task<object>> DemoFuncTask
    => () => Task.FromResult<object>(new object())
-  
+
 // ConfigureAwait(bool) 的意思是指設定是否此awaiter 需要留存上下文　預設為false（沒寫亦為false）
 // 這裡的上下文是指於排程建立時的那個線程的SynchronizationContext之類 會方法執行前後有關連性的東西
 // ex: TraceStack (呼叫堆疊),如果ConfigureAwait(true) 時　可以看到最前面的堆疊　反之指能看到排程開始時的堆疊
@@ -65,10 +94,7 @@ DemoAction();
 }
 public Action DemoAction => () => {}
 public Func<object> DemoFunc => () => new Object();
-
 ```
-
-
 
 
 
