@@ -89,7 +89,7 @@ public Func<Task<object>> DemoFuncTask => () => Task.FromResult<object>(new obje
 
 // ConfigureAwait(bool) 的意思是指設定是否此awaiter 需要留存上下文　預設為false（沒寫亦為false）
 // 這裡的上下文是指於排程建立時的那個線程的SynchronizationContext之類 會方法執行前後有關連性的東西
-// ex: TraceStack (呼叫堆疊),如果ConfigureAwait(true) 時　可以看到最前面的堆疊　反之指能看到排程開始時的堆疊
+// ex: TraceStack (呼叫堆疊),如果ConfigureAwait(true) 時,可以看到最前面的堆疊,反之只能看到排程開始時的堆疊
 // 建議ConfigureAwait(false)主要還是效能首選考量
 // 但如因為不留上下文而讓開發時難以追蹤問題的話　不訪設定變數來統一開關這個flag 也不失一方法
 public void ConfigAwaitDemo() => Task.Run(DemoAction).ConfigureAwait(false);　　
