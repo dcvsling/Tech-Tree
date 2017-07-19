@@ -35,7 +35,6 @@ public class MyClass<T> : IObservable<T>
 }
 
 new MyClass<T>(oo.oo.oo.IObservable<T>);
-
 ```
 
 
