@@ -41,7 +41,7 @@ class Observer<T> : IObserver<T>
     {
         //...
     }
-    
+
     public void OnComplete()
     {
         //...
@@ -55,8 +55,6 @@ class Observable<T> : IObservable<T>
         
     }
 }
-
-
 ```
 
 
