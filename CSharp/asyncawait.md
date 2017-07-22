@@ -47,8 +47,9 @@ public void NonAsyncMethod()
 
     Task<object> resultTask = Task.Run<object>(() => DemoFunc()); // 具有回傳值的非同步方法則用泛型指定回傳型別
                                                                   // 具回傳值的排程型別為Task<T>
-    
-    //resultTask.Wait();                      // 當需要回傳值的時候必須以Wait method 等待排程完成
+
+    //resultTask.Wait();                      // Wait 會鎖死當下線程 所以使用不當容易造成deadlock 故不建議使用 07/23/2017
+                                              // 當需要回傳值的時候必須以Wait method 等待排程完成
                                               // 否則通常都會拿到null (因為回傳值還沒回來)
 
     object result = resultTask.Result;        // 以Task.Result取得回傳值
