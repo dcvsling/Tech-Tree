@@ -47,11 +47,13 @@ public void NonAsyncMethod()
 
     Task<object> resultTask = Task.Run<object>(() => DemoFunc()); // 具有回傳值的非同步方法則用泛型指定回傳型別
                                                                   // 具回傳值的排程型別為Task<T>
+    
+    //resultTask.Wait();                      // 當需要回傳值的時候必須以Wait method 等待排程完成
+                                              // 否則通常都會拿到null (因為回傳值還沒回來)
 
-    resultTask.Wait();                      // 當需要回傳值的時候必須以Wait method 等待排程完成
-                                            // 否則通常都會拿到null (因為回傳值還沒回來)
-
-    object result = resultTask.Result;      // 以Task.Result取得回傳值 
+    object result = resultTask.Result;        // 以Task.Result取得回傳值
+                                              // Task.Result 即為 等待並取回Result 7/23/2017 by 余小章大大
+                                              // 於multi await 時 似乎有些狀況 尚未查證
 
     // 無回傳值的Task 可以無需執行Wait方法
     // await task; 也同樣可以利用Wait　方法等待排程完成後　在繼續往下執行
