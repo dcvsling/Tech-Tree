@@ -26,6 +26,7 @@
   * [Decorator & Convention](design-pattern/decorator-and-convention.md)
   * [Action & Filter & Middleware](design-pattern/action-and-filter-and-middleware.md)
   * [Pattern In DI ](design-pattern/pattern-in-di.md)
+  * [Options Pattern](design-pattern/options-pattern.md)
 * [OOP](oop.md)
   * [OOP 思維](OOP/oop.md)
   * [Abstractions](OOP/abstractions.md)
