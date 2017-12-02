@@ -29,35 +29,29 @@
 * Entry - 入口
 * Source - 來源,指特定項目所需要的來源資源
 
-
-
-### 關聯性 
+### 命名的行為描述
 
 ---
 
-* Context has Descriptor , ex: ActionContext has ActionDescrptor
-* Factory init by Providers , then Factory use Command Pattern to select Provider and Create item
-* Part always mean an item in a bigger item like type is part of assembly, property is part of class
-* Convention is always do something when do one behavior, like exception handler must exist anytime
-* Source is an object with some information for some behavior need,
-* Result is an answer flag , and may have result data
-* Callback is invoke by trigger
-* Monitor can set many trigger
-* Descriptor to Describe information like Content
-* Provider is provide one kind of item to create, and an item may have many Providers
-* Activator to active a service and service may need to create many other items and composite them
-* Builder need to config before build
-* Invoker is invoke one method and get result if has
-* Excutor is do many inner stuff then expose result
-* Handler has a Callback and wait trigger to use
-* Manager has some Collection to management
-* Accessor can get or set one item
-* Visitor can get deeper in any level and use them
-* Parser need to analyse data than change to different type data
-* Formatter will write exist info to another one
-* Classifier will mark category any item
-* DecisionTree will use category to decision
-* binder wont disconnect in runtime , but connect will
+* Context 是具有上下文關係的內容 而 Content 是靜態內容
+* Factory 通常是利用已知的 Provider 集合 以及可用於Provider的參數來Create 對象
+* Convention 會預設對象的行為 , 而Configuration 則為對象要設定的參數, 所以Convention有可能使用Configuration作為預設
+* Source 提供對象於建立時所需要的資源, 而Provider 則提供那個對象
+* Result 紀錄執行結果, 如果有回船值也會記錄在這
+* Callback 是執行時遇到各種觸發點時所需要執行的 function/method
+* Monitor 可以定義指定觸發點所需要執行的 function/method
+* Descriptor 會盡可能描述對象的各種方法 成員 及 狀態 以作為其他運用
+* Provider 會具有對象的一種取得方式, 如果取得來源很多 那通常會有多個 Provider
+* Activator 可以啟用對象 , 而當然啟用的對象可能會啟用更多的對象
+* Builder 通常可以記錄建構的資訊,且藉由這些資訊來建立對象
+* Invoker 可以Invoke指定目標
+* Excutor 執行一個預定的流程或工作
+* Handler 會在觸發點要執行Callback 時去Invoke Callback
+* Manager 往往可以對於對象做全面的操作與監控
+* Accessor 可以對對象做存取
+* Visitor 會使用層級式Visitor Pattern 
+* Parser 會建立一個由目標為基礎轉換的新對象
+* Formatter 會建立一個以目標為基礎做格式上變化的新對象
 
 
 
