@@ -9,6 +9,8 @@
   * [Extensions Method Timing](CSharp/ExtensionMethod/Timing.md)
   * [Interface-base Development](CSharp/Interface-base Development.md)
   * [Task & Async/Await](CSharp/asyncawait.md)
+    * [Task 與 IEnumerable 間的常見問題](CSharp/asyncawait/task-yu-ienumerable-jian-de-chang-jian-wen-ti.md)
+    * [比較Delegate, Task, Lazy的行為模式](CSharp/asyncawait/bi-jiao-delegate-task-lazy-de-xing-wei-mo-shi.md)
   * [.Net Core 2.0 on Visual Studio](CSharp/NetCore20/Net-Core-20-Preview-With-Visual-Studio.md)
 * [Reactive Programming](reactive-programming.md)
   * [Start from Action&lt;T&gt;](reactive-programming/start-from-actiont.md)
