@@ -35,4 +35,5 @@
   * [將if , switch 判斷轉為用物件來解決](OOP/jiang-if-switch-pan-duan-zhuan-wei-yong-wu-jian-lai-jie-jue.md)
 * [Clean Code](clean-code.md)
   * [Class Naming](clean-code/naming.md)
+  * [Class Design](clean-code/class-design.md)
 
