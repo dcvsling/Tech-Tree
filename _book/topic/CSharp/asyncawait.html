@@ -1,0 +1,847 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Task & Async/Await · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="asyncawait/task-yu-ienumerable-jian-de-chang-jian-wen-ti.html" />
+    
+    
+    <link rel="prev" href="Interface-base Development.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../README.md">
+            
+                <span>
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Angular 2
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Angular2/mvc.html">
+            
+                <a href="../Angular2/mvc.html">
+            
+                    
+                    about MVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Angular2/dynamically.html">
+            
+                <a href="../Angular2/dynamically.html">
+            
+                    
+                    Dynamically
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Angular2/about-learning.html">
+            
+                <a href="../Angular2/about-learning.html">
+            
+                    
+                    About Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../c.html">
+            
+                <a href="../c.html">
+            
+                    
+                    C#
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="ExtensionMethod/Timing.html">
+            
+                <a href="ExtensionMethod/Timing.html">
+            
+                    
+                    Extensions Method Timing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Interface-base Development.html">
+            
+                <a href="Interface-base Development.html">
+            
+                    
+                    Interface-base Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="asyncawait.html">
+            
+                <a href="asyncawait.html">
+            
+                    
+                    Task & Async/Await
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="asyncawait/task-yu-ienumerable-jian-de-chang-jian-wen-ti.html">
+            
+                <a href="asyncawait/task-yu-ienumerable-jian-de-chang-jian-wen-ti.html">
+            
+                    
+                    Task 與 IEnumerable 間的常見問題
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="asyncawait/bi-jiao-delegate-task-lazy-de-xing-wei-mo-shi.html">
+            
+                <a href="asyncawait/bi-jiao-delegate-task-lazy-de-xing-wei-mo-shi.html">
+            
+                    
+                    比較Delegate, Task, Lazy的行為模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="NetCore20/Net-Core-20-Preview-With-Visual-Studio.html">
+            
+                <a href="NetCore20/Net-Core-20-Preview-With-Visual-Studio.html">
+            
+                    
+                    .Net Core 2.0 on Visual Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../reactive-programming.html">
+            
+                <a href="../reactive-programming.html">
+            
+                    
+                    Reactive Programming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../reactive-programming/start-from-actiont.html">
+            
+                <a href="../reactive-programming/start-from-actiont.html">
+            
+                    
+                    Start from Action<T>
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../reactive-programming/observer-and-observable.html">
+            
+                <a href="../reactive-programming/observer-and-observable.html">
+            
+                    
+                    Observer & Observable
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../design-pattern.html">
+            
+                <a href="../design-pattern.html">
+            
+                    
+                    Design Pattern
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../design-pattern/about-design-pattern.html">
+            
+                <a href="../design-pattern/about-design-pattern.html">
+            
+                    
+                    About Design Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../design-pattern/dependency-inversion/dependency-inversion.html">
+            
+                <a href="../design-pattern/dependency-inversion/dependency-inversion.html">
+            
+                    
+                    Dependency Inversion
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../design-pattern/dependency-inversion/what-is-di-in-basic.html">
+            
+                <a href="../design-pattern/dependency-inversion/what-is-di-in-basic.html">
+            
+                    
+                    what is DI in basic?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../design-pattern/dependency-inversion/dotnet-core-di.html">
+            
+                <a href="../design-pattern/dependency-inversion/dotnet-core-di.html">
+            
+                    
+                    DotNet Core DI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../design-pattern/dependency-inversion/iserviceprovider.html">
+            
+                <a href="../design-pattern/dependency-inversion/iserviceprovider.html">
+            
+                    
+                    IServiceProvider & ComponentModel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.4" data-path="../design-pattern/dependency-inversion/dependency-inversion/constructor-injection.html">
+            
+                <a href="../design-pattern/dependency-inversion/dependency-inversion/constructor-injection.html">
+            
+                    
+                    Constructor Injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.5" data-path="../design-pattern/dependency-inversion/magic-box.html">
+            
+                <a href="../design-pattern/dependency-inversion/magic-box.html">
+            
+                    
+                    Magic Box ? 與建置階段 ?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../design-pattern/componentmodel.html">
+            
+                <a href="../design-pattern/componentmodel.html">
+            
+                    
+                    ComponentModel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../design-pattern/ienumerable-vs-iterator.html">
+            
+                <a href="../design-pattern/ienumerable-vs-iterator.html">
+            
+                    
+                    IEnumerable vs Iterator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../design-pattern/decorator-and-convention.html">
+            
+                <a href="../design-pattern/decorator-and-convention.html">
+            
+                    
+                    Decorator & Convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../design-pattern/action-and-filter-and-middleware.html">
+            
+                <a href="../design-pattern/action-and-filter-and-middleware.html">
+            
+                    
+                    Action & Filter & Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../design-pattern/pattern-in-di.html">
+            
+                <a href="../design-pattern/pattern-in-di.html">
+            
+                    
+                    Pattern In DI 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../design-pattern/options-pattern.html">
+            
+                <a href="../design-pattern/options-pattern.html">
+            
+                    
+                    Options Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../oop.html">
+            
+                <a href="../oop.html">
+            
+                    
+                    OOP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../OOP/oop.html">
+            
+                <a href="../OOP/oop.html">
+            
+                    
+                    OOP 思維
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../OOP/abstractions.html">
+            
+                <a href="../OOP/abstractions.html">
+            
+                    
+                    Abstractions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../OOP/jiang-if-switch-pan-duan-zhuan-wei-yong-wu-jian-lai-jie-jue.html">
+            
+                <a href="../OOP/jiang-if-switch-pan-duan-zhuan-wei-yong-wu-jian-lai-jie-jue.html">
+            
+                    
+                    將if , switch 判斷轉為用物件來解決
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../clean-code.html">
+            
+                <a href="../clean-code.html">
+            
+                    
+                    Clean Code
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../clean-code/naming.html">
+            
+                <a href="../clean-code/naming.html">
+            
+                    
+                    Class Naming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../clean-code/class-design.html">
+            
+                <a href="../clean-code/class-design.html">
+            
+                    
+                    Class Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Task & Async/Await</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x6392;&#x7A0B;-task--&#x975E;&#x540C;&#x6B65;-async--await">&#x6392;&#x7A0B; Task &amp; &#x975E;&#x540C;&#x6B65; Async / Await</h3>
+<hr>
+<p>&#x95DC;&#x9375;&#x5B57;</p>
+<ul>
+<li>Task : &#x662F;&#x8B93;&#x6307;&#x5B9A;&#x7684;Delegate &#x4EE5;&#x53E6;&#x4E00;&#x500B;&#x7DDA;&#x7A0B;&#x4F86;&#x57F7;&#x884C;.</li>
+<li>async : &#x6307;&#x5B9A;&#x76EE;&#x6A19;delegate &#x70BA;&#x5B58;&#x5728;&#x975E;&#x540C;&#x6B65;&#x8A9E;&#x6CD5;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x56DE;&#x50B3;&#x503C;&#x6539;&#x8B8A;&#x70BA;Task &amp; Task&lt;T&gt; (&#x9019;&#x88E1;&#x4E0D;&#x5EFA;&#x8B70;&#x4EE5;void &#x4F5C;&#x70BA;&#x56DE;&#x50B3;&#x503C;(&#x8A3B;1))</li>
+<li>await : &#x7B49;&#x5F85;&#x76EE;&#x6A19;&#x6392;&#x7A0B;&#x7D50;&#x675F;</li>
+</ul>
+<p>&#x7406;&#x89E3;&#x65B9;&#x6CD5;</p>
+<ol>
+<li>&#x9047;&#x5230;Task &#x6642;&#x6703;&#x53E6;&#x958B;&#x7DDA;&#x7A0B;&#x8207;&#x7576;&#x4E0B;&#x7DDA;&#x7A0B;&#x4E00;&#x8D77;&#x5F80;&#x4E0B;&#x57F7;&#x884C;</li>
+<li>&#x9047;&#x5230;await &#x6642;&#x7A0B;&#x5F0F;&#x6703;&#x7B49;&#x5F85;&#x76EE;&#x6A19;Task&#x5B8C;&#x6210;</li>
+<li>await Task.Run &#x70BA;&#x7B49;&#x5F85;&#x4E00;&#x500B;&#x65B0;&#x958B;&#x7684;&#x6392;&#x7A0B;</li>
+<li>&#x7B49;&#x5F85;&#x6642;&#x4E0D;&#x898B;&#x5F97;&#x6307;&#x6709;&#x9019;&#x500B;&#x724C;&#x7A0B;&#x5728;&#x57F7;&#x884C;&#x3000;&#x53EF;&#x80FD;&#x9084;&#x6709;&#x5176;&#x4ED6;&#x5C1A;&#x672A;&#x9032;&#x5165;&#x7B49;&#x5F85;&#x7684;&#x724C;&#x7A0B;&#x4E5F;&#x5728;&#x57F7;&#x884C;</li>
+<li>async &#x662F; &#x53EF;&#x4EE5;&#x8B93;method &#x4E2D;&#x7684;&#x3000;await Task.Run &#x7C21;&#x5316;&#x6210;&#x70BA;&#x3000;await &#x7684;method &#x95DC;&#x9375;&#x5B57;</li>
+<li>&#x5F9E;&#x55AE;&#x4E00;&#x500B;&#x724C;&#x7A0B;&#x7684;&#x8996;&#x89D2;&#x4F86;&#x770B;&#x7A0B;&#x5F0F;&#x7684;&#x904B;&#x884C;&#x6D41;&#x7A0B;&#x4ECD;&#x7136;&#x6C92;&#x6709;&#x6539;&#x8B8A; &#x53EA;&#x662F;&#x591A;&#x4E86;&#x4E00;&#x500B;&#x7B49;&#x5F85;&#x7684;&#x901A;&#x77E5;&#x7E7C;&#x7E8C;&#x9032;&#x884C;&#x7684;&#x72C0;&#x614B;(&#x5982;&#x679C;&#x770B;&#x4E0D;&#x61C2;&#x90A3;&#x5F35;&#x8907;&#x96DC;&#x7684;&#x5716;&#x7684;&#x8A71;)</li>
+<li>&#x9700;&#x8981;&#x5716;&#x8F14;&#x52A9;&#x7684;&#x8A71;,&#x53EF;&#x4EE5;&#x4EE5;&#x4E0B;&#x9762;&#x9019;&#x5F35;&#x5716;&#x4F86;&#x505A;&#x70BA;&#x53C3;&#x8003;</li>
+</ol>
+<pre><code>-------------------&gt;&#x3000;&#x4E3B;&#x7DDA;&#x7A0B;&#x6642;&#x9593;&#x8EF8;
+&#x55AE;&#x7DDA;&#x7A0B;
+-------------------&gt;
+&#x975E;&#x540C;&#x6B65;(&#x975E;&#x591A;&#x7DDA;&#x7A0B;&#x540C;&#x6642;&#x9032;&#x884C;)
+-----&gt;|      |-----&gt;  &#x4E2D;&#x9593;&#x70BA;&#x7B49;&#x5F85;&#x7684;&#x6642;&#x9593; (&#x7528; await)
+      |-----&gt;|        &#x53E6;&#x4E00;&#x500B;&#x724C;&#x7A0B;&#x958B;&#x59CB;&#x904B;&#x4F5C;&#x4E26;&#x7D50;&#x675F; (&#x7528;Task)
+&#x591A;&#x7DDA;&#x7A0B;
+-------------------&gt;  &#x4E3B;&#x7DDA;&#x7A0B;&#x65BC;&#x4E2D;&#x9014;&#x5275;&#x9020;&#x4E86;&#x5169;&#x500B;&#x724C;&#x7A0B;(&#x7528;Task)&#x3000;&#x4F46;&#x4E26;&#x672A;&#x7B49;&#x5F85;&#x4EFB;&#x4F55;&#x4E00;&#x500B;&#x724C;&#x7A0B;
+   |--------&gt;         &#x6392;&#x7A0B;&#x4E00;&#x57F7;&#x884C;&#x7D50;&#x675F;
+       |--------&gt;     &#x6392;&#x7A0B;&#x4E8C;&#x57F7;&#x884C;&#x7D50;&#x675F;
+&#x975E;&#x540C;&#x6B65;&#x8207;&#x591A;&#x7DDA;&#x7A0B;&#x4EA4;&#x932F;&#x60C5;&#x5883;
+-----&gt;|    |-----&gt;|   |-------&gt; M  M&#x5EFA;&#x7ACB;T1,T3 &#x4E26;&#x90FD;&#x65BC;&#x5EFA;&#x7ACB;&#x6642;&#x7B49;&#x5F85; (&#x7528; await Task)
+      |---&gt;|                    T1 T1&#x5EFA;&#x7ACB;T2&#x4F46;&#x6C92;&#x6709;&#x9032;&#x884C;&#x7B49;&#x5F85;(&#x7528; Task)
+        |-------|   |----&gt;      T2 T2&#x5EFA;&#x7ACB;&#x4E86;T4&#x4F46;&#x662F;&#x4E26;&#x672A;&#x7ACB;&#x5373;&#x9032;&#x884C;&#x7B49;&#x5F85;&#x9032;&#x884C;&#x7B49;&#x5F85;(&#x5148;&#x7528;task &#x5F8C;&#x9762;&#x624D;await)
+                  |--&gt;|         T3 T3&#x5EFA;&#x7ACB;&#x5F8C;&#x904B;&#x884C;&#x7D50;&#x675F;
+             |-----&gt;|           T4 T4&#x5EFA;&#x7ACB;&#x5F8C;&#x8207;T2&#x4E00;&#x8D77;&#x904B;&#x884C; &#x4E2D;&#x9014;T2&#x9032;&#x5165;&#x7B49;&#x5F85;&#x76F4;&#x5230;T4&#x7D50;&#x675F;
+</code></pre><p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</p>
+<pre><code>public void NonAsyncMethod() 
+{
+    Task task = Task.Run(() =&gt; DemoAction()); &#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;// &#x57FA;&#x672C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;Task.Run&#x4E2D;&#x7684;Action or Func&lt;T&gt; 
+                                                        &#x3000;&#x3000;&#x3000;&#x3000; &#x3000;// &#x6703;&#x5728;&#x53E6;&#x4E00;&#x500B;&#x7DDA;&#x7A0B;&#x5B8C;&#x6210;,&#x6392;&#x7A0B;&#x6703;&#x56DE;&#x50B3;&#x578B;&#x5225;&#x70BA;Task&#x7684;&#x7269;&#x4EF6;
+
+    Task&lt;object&gt; resultTask = Task.Run&lt;object&gt;(() =&gt; DemoFunc()); // &#x5177;&#x6709;&#x56DE;&#x50B3;&#x503C;&#x7684;&#x975E;&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#x5247;&#x7528;&#x6CDB;&#x578B;&#x6307;&#x5B9A;&#x56DE;&#x50B3;&#x578B;&#x5225;
+                                                                  // &#x5177;&#x56DE;&#x50B3;&#x503C;&#x7684;&#x6392;&#x7A0B;&#x578B;&#x5225;&#x70BA;Task&lt;T&gt;
+
+    //resultTask.Wait();                      // Wait &#x6703;&#x9396;&#x6B7B;&#x7576;&#x4E0B;&#x7DDA;&#x7A0B; &#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x4E0D;&#x7576;&#x5BB9;&#x6613;&#x9020;&#x6210;deadlock &#x6545;&#x4E0D;&#x5EFA;&#x8B70;&#x4F7F;&#x7528; 07/23/2017
+                                              // &#x7576;&#x9700;&#x8981;&#x56DE;&#x50B3;&#x503C;&#x7684;&#x6642;&#x5019;&#x5FC5;&#x9808;&#x4EE5;Wait method &#x7B49;&#x5F85;&#x6392;&#x7A0B;&#x5B8C;&#x6210;
+                                              // &#x5426;&#x5247;&#x901A;&#x5E38;&#x90FD;&#x6703;&#x62FF;&#x5230;null (&#x56E0;&#x70BA;&#x56DE;&#x50B3;&#x503C;&#x9084;&#x6C92;&#x56DE;&#x4F86;)
+
+    object result = resultTask.Result;        // &#x4EE5;Task.Result&#x53D6;&#x5F97;&#x56DE;&#x50B3;&#x503C;
+                                              // Task.Result &#x5373;&#x70BA; &#x7B49;&#x5F85;&#x4E26;&#x53D6;&#x56DE;Result 7/23/2017 by &#x4F59;&#x5C0F;&#x7AE0;&#x5927;&#x5927;
+                                              // &#x65BC;multi await &#x6642; &#x4F3C;&#x4E4E;&#x6709;&#x4E9B;&#x72C0;&#x6CC1; &#x5C1A;&#x672A;&#x67E5;&#x8B49;
+
+    // &#x7121;&#x56DE;&#x50B3;&#x503C;&#x7684;Task &#x53EF;&#x4EE5;&#x7121;&#x9700;&#x57F7;&#x884C;Wait&#x65B9;&#x6CD5;
+    // await task; &#x4E5F;&#x540C;&#x6A23;&#x53EF;&#x4EE5;&#x5229;&#x7528;Wait&#x3000;&#x65B9;&#x6CD5;&#x7B49;&#x5F85;&#x6392;&#x7A0B;&#x5B8C;&#x6210;&#x5F8C;&#x3000;&#x5728;&#x7E7C;&#x7E8C;&#x5F80;&#x4E0B;&#x57F7;&#x884C;
+}
+
+async public Task InvokeAsync()  //async &#x6A19;&#x793A;&#x6CD5;&#x53EF;&#x4EE5;&#x5BEB;&#x5728;&#x958B;&#x982D;,&#x500B;&#x4EBA;&#x5EFA;&#x8B70;&#x5982;&#x5DF2;&#x77E5;&#x5305;&#x542B;&#x975E;&#x540C;&#x6B65;&#x5167;&#x5BB9;&#x7684;method&#x52A0;&#x5165;Async&#x5728;name&#x5F8C;&#x9762;
+{
+    await DemoTask();                              // &#x65BC;&#x6A19;&#x793A;&#x70BA;&#x975E;&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#x3000;&#x53EF;&#x4EE5;&#x7528;await &#x4F86;&#x53D6;&#x4EE3; Task.Wait()
+
+    var result = await DemoFuncTask();             // &#x4EA6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;await &#x4F86;&#x76F4;&#x63A5;&#x5F97;&#x5230; Task&lt;T&gt;.Wait() &#x5F8C;&#x7684;&#x3000;Task.Result
+
+    Task.Run(() =&gt; DemoTask())                     // &#x65BC;&#x975E;&#x540C;&#x6B65;&#x6A19;&#x8A18;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#x4EA6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Task.Run &#x4F86;&#x53E6;&#x958B;&#x6392;&#x7A0B;, 
+                                                   // &#x90A3;&#x6B64;&#x6392;&#x7A0B;&#x5C31;&#x6703;&#x8207;&#x7576;&#x4E0B;&#x7684;&#x7DDA;&#x7A0B;&#x8D70;&#x4E0D;&#x540C;&#x7DDA;&#x7A0B;
+
+    await Task.Run(() =&gt; DemoFuncTask());          // &#x7576;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x5BA3;&#x544A;Task.Run&#x4E4B;&#x5F8C;&#x7528;await&#x7B49;&#x5F85;
+                                                   // &#x53EA;&#x662F;&#x9019;&#x8207; await DemoTask()&#x4E26;&#x7121;&#x5DEE;&#x7570;
+
+    result = await Task.Run&lt;obejct&gt;(() =&gt; {        // &#x6240;&#x4EE5;&#x901A;&#x5E38;&#x6703;&#x8981;&#x9019;&#x6A23;&#x7528;&#x662F;&#x56E0;&#x70BA;&#x4F7F;&#x7528;&#x4E86;lambda &#x4F86;&#x81E8;&#x6642;&#x57F7;&#x884C;&#x591A;&#x500B; method 
+        DemoAction();
+        return DemoFunc();                         // &#x9019;&#x88E1;&#x4E00;&#x6A23;&#x53EF;&#x4EE5;&#x56DE;&#x50B3;&#x6240;&#x9700;&#x7684;&#x56DE;&#x50B3;&#x503C;
+    });
+
+    result = await Task.Run(DemoActionManyMethod); // &#x5982;&#x679C;&#x4E0D;&#x60F3;&#x5BEB;lambda &#x5BEB;&#x6210;Method &#x4E26;&#x5E36;&#x5165;&#x540D;&#x7A31;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x7684;
+
+    // &#x56E0;&#x70BA;&#x4ECD;&#x7136;&#x6C92;&#x6709;&#x7B49;&#x5F85;&#x4E2D;&#x9014;&#x57F7;&#x884C;&#x7684;&#x3000;Task.Run(() =&gt; DemoTask()) &#x6240;&#x4EE5;&#x8A72;&#x724C;&#x7A0B;&#x4ECD;&#x7136;&#x5728;&#x6301;&#x7E8C;&#x9032;&#x884C;&#x4E2D;
+    // &#x4EE5;&#x6B64;&#x53EF;&#x4EE5;&#x505A;&#x51FA;&#x985E;&#x4F3C;MultiThread&#x7684;&#x6548;&#x679C; 
+}
+
+// Property Value &#x70BA; Delegate&#x6642;&#x4EA6;&#x53EF;&#x4EE5;&#x628A;Property&#x7576;Method&#x547C;&#x53EB;
+// &#x7576;&#x7121;&#x56DE;&#x50B3;&#x503C;&#x7684;Task,&#x4E14;&#x7121;&#x6A19;&#x793A;async&#x7684;&#x6642;&#x5019;,&#x53EF;&#x56DE;&#x50B3;Task.CompletedTask &#x4EE5;&#x4F5C;&#x70BA;&#x5B8C;&#x6210;&#x5DE5;&#x4F5C;&#x7684;&#x56DE;&#x50B3;Task
+public Func&lt;Task&gt; DemoActionTask =&gt; () =&gt; Task.CompletedTask; 
+
+// &#x7121;&#x6A19;&#x793A;async &#x4E14;&#x5177;&#x6709;Task&lt;T&gt;&#x56DE;&#x50B3;&#x503C;&#x7684;&#x65B9;&#x6CD5;&#x53EF;&#x7528;Task.FromResult&lt;T&gt;(T t)&#x4F86;&#x628A;&#x7D50;&#x679C;&#x56DE;&#x50B3;
+public Func&lt;Task&lt;object&gt;&gt; DemoFuncTask =&gt; () =&gt; Task.FromResult&lt;object&gt;(new object())
+
+// ConfigureAwait(bool) &#x7684;&#x610F;&#x601D;&#x662F;&#x6307;&#x8A2D;&#x5B9A;&#x662F;&#x5426;&#x6B64;awaiter &#x9700;&#x8981;&#x7559;&#x5B58;&#x4E0A;&#x4E0B;&#x6587;&#x3000;&#x9810;&#x8A2D;&#x70BA;false&#xFF08;&#x6C92;&#x5BEB;&#x4EA6;&#x70BA;false&#xFF09;
+// &#x9019;&#x88E1;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x662F;&#x6307;&#x65BC;&#x6392;&#x7A0B;&#x5EFA;&#x7ACB;&#x6642;&#x7684;&#x90A3;&#x500B;&#x7DDA;&#x7A0B;&#x7684;SynchronizationContext&#x4E4B;&#x985E; &#x6703;&#x65B9;&#x6CD5;&#x57F7;&#x884C;&#x524D;&#x5F8C;&#x6709;&#x95DC;&#x9023;&#x6027;&#x7684;&#x6771;&#x897F;
+// ex: TraceStack (&#x547C;&#x53EB;&#x5806;&#x758A;),&#x5982;&#x679C;ConfigureAwait(true) &#x6642;,&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6700;&#x524D;&#x9762;&#x7684;&#x5806;&#x758A;,&#x53CD;&#x4E4B;&#x53EA;&#x80FD;&#x770B;&#x5230;&#x6392;&#x7A0B;&#x958B;&#x59CB;&#x6642;&#x7684;&#x5806;&#x758A;
+// &#x5EFA;&#x8B70;ConfigureAwait(false)&#x4E3B;&#x8981;&#x9084;&#x662F;&#x6548;&#x80FD;&#x9996;&#x9078;&#x8003;&#x91CF;
+// &#x4F46;&#x5982;&#x56E0;&#x70BA;&#x4E0D;&#x7559;&#x4E0A;&#x4E0B;&#x6587;&#x800C;&#x8B93;&#x958B;&#x767C;&#x6642;&#x96E3;&#x4EE5;&#x8FFD;&#x8E64;&#x554F;&#x984C;&#x7684;&#x8A71;&#x3000;&#x4E0D;&#x8A2A;&#x8A2D;&#x5B9A;&#x8B8A;&#x6578;&#x4F86;&#x7D71;&#x4E00;&#x958B;&#x95DC;&#x9019;&#x500B;flag &#x4E5F;&#x4E0D;&#x5931;&#x4E00;&#x65B9;&#x6CD5;
+public void ConfigAwaitDemo() =&gt; Task.Run(DemoAction).ConfigureAwait(false);&#x3000;&#x3000;
+
+// &#x4EE5;&#x4E0B;demo &#x7528;&#x793A;&#x7BC4;&#x7528;&#x4F8B;
+public void DemoActionManyMethod() {
+DemoAction();
+DemoAction();
+DemoAction();
+}
+public Action DemoAction =&gt; () =&gt; {}
+public Func&lt;object&gt; DemoFunc =&gt; () =&gt; new Object();
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Task & Async/Await","level":"1.4.3","depth":2,"next":{"title":"Task 與 IEnumerable 間的常見問題","level":"1.4.3.1","depth":3,"path":"topic/CSharp/asyncawait/task-yu-ienumerable-jian-de-chang-jian-wen-ti.md","ref":"topic/CSharp/asyncawait/task-yu-ienumerable-jian-de-chang-jian-wen-ti.md","articles":[]},"previous":{"title":"Interface-base Development","level":"1.4.2","depth":2,"path":"topic/CSharp/Interface-base Development.md","ref":"topic/CSharp/Interface-base Development.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api","livereload"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"topic/CSharp/asyncawait.md","mtime":"2018-02-07T02:07:12.453Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-07T05:29:23.420Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
