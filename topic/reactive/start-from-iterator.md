@@ -77,3 +77,9 @@ sequence.Select(x => {
 })
 
 ```
+
+總之在 Linq 裡面是沒有 Do 的或是類似 Do 的功能的
+
+所以 Linq 就另外發展出一套新的擴展
+
+[Interactive & Async](topic/reactive/interactive-and-async.md)
