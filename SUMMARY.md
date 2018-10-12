@@ -1,7 +1,7 @@
 # Summary
 
-* [Introduction](topic/README.md)
-* Angular 2
+* [Introduction](README.md)
+* [Angular 2](angular-2.md)
   * [about MVC](topic/Angular2/mvc.md)
   * [Dynamically](topic/Angular2/dynamically.md)
   * [About Learning](topic/Angular2/about-learning.md)
@@ -32,7 +32,5 @@
   * [OOP 思維](topic/OOP/oop.md)
   * [Abstractions](topic/OOP/abstractions.md)
   * [將if , switch 判斷轉為用物件來解決](topic/OOP/jiang-if-switch-pan-duan-zhuan-wei-yong-wu-jian-lai-jie-jue.md)
-* [Clean Code](topic/clean-code.md)
-  * [Class Naming](topic/clean-code/naming.md)
-  * [Class Design](topic/clean-code/class-design.md)
+* [Clean Code](https://dcvsling.gitbook.io/clean-code/)
 
